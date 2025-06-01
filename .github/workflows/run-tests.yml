@@ -6,7 +6,7 @@ on:
       - '**.php'
       - '.github/workflows/run-tests.yml'
       - 'phpunit.xml.dist'
-      - 'composer.json' 
+      - 'composer.json'
       - 'composer.lock'
 
 concurrency:
@@ -21,11 +21,11 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest, windows-latest]
-        php: [8.4] 
+        php: [8.4]
         stability: [prefer-lowest, prefer-stable]
 
     name: P${{ matrix.php }} - ${{ matrix.stability }} - ${{ matrix.os }}
- 
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
