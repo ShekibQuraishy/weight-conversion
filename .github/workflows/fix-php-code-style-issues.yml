@@ -4,6 +4,10 @@ on:
   push:
     paths:
       - '**.php'
+      - '.github/workflows/fix-php-code-style-issues.yml'
+      - 'phpunit.xml.dist'
+      - 'composer.json'
+      - 'composer.lock'
 
 permissions:
   contents: write
