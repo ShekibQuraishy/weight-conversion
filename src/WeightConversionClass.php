@@ -8,7 +8,7 @@ class WeightConversionClass
     {
         return new self($kilograms);
     }
-    
+
     public function __construct(protected float $kilograms)
     {
     }
@@ -18,5 +18,9 @@ class WeightConversionClass
        return $this->kilograms * 2.20462;
    }
 
+   public function toGrams(): int
+   {
+       return $this->kilograms * 1000;
+   }
 
 }
